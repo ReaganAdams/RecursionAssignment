@@ -1,0 +1,17 @@
+package Recursion;
+
+public class DecimalToBinary {
+
+    // Function to convert a decimal number to binary using recursion
+    public String decimalToBinary(int n) {
+        if (n == 0) {
+            return "";
+        }
+        return decimalToBinary(n / 2) + (n % 2); // Recur for the quotient and append the remainder
+    }
+
+    public static void main(String[] args) {
+        DecimalToBinary decimalToBinary = new DecimalToBinary();
+        System.out.println("Binary (Recursive): " + decimalToBinary.decimalToBinary(13)); // Example: 13 -> 1101
+    }
+}
