@@ -1,0 +1,17 @@
+package Recursion;
+
+public class SumOfInteger {
+
+    // Function to calculate the sum of digits of a number using recursion
+    public int sumOfDigits(int n) {
+        if (n == 0) {
+            return 0;
+        }
+        return n % 10 + sumOfDigits(n / 10); // Extract last digit and recurse with the remaining number
+    }
+
+    public static void main(String[] args) {
+        SumOfInteger sum = new SumOfInteger();
+        System.out.println("Sum of digits (Recursive): " + sum.sumOfDigits(12345)); // Example: 1 + 2 + 3 + 4 + 5 = 15
+    }
+}
